@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.playmarktrails"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <provider
+            android:name="com.playmarktrails.provider.Provider"
+            android:authorities="com.playmarktrails"
+            android:exported="false" >
+        </provider>
+        <provider
+            android:name="com.playmarktrails.provider.FileProvider"
+            android:authorities="com.playmarkmurphy.FileProvider"
+            android:exported="true" >
+        </provider>
+
+        <activity
+            android:name="com.playmarktrails.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.playmarktrails.gridlayout.PlayGridLayoutActivity"
+            android:label="@string/title_activity_play_grid_layout" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.dialog.ChronoActivity"
+            android:label="@string/title_activity_chrono" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.list.HeaderDetailListActivity"
+            android:label="@string/title_activity_header_detail_list" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.list.RateListActivity"
+            android:label="@string/title_activity_rate_list" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.actionbar.ListNavActivity"
+            android:label="@string/title_activity_list_nav" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.actionbar.TabDemoActivity"
+            android:label="@string/title_activity_tab_demo" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.actionmode.ActionModeActivity"
+            android:label="@string/title_activity_action_mode" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.actionmode.ActionModeMCActivity"
+            android:label="@string/title_activity_action_mode_mc" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.actionmode.LongPressActivity"
+            android:label="@string/title_activity_long_press"
+            android:uiOptions="splitActionBarWhenNarrow" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.actionmode.ActionSearchActivity"
+            android:label="@string/title_activity_action_search" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.provider.FilesCPActivity"
+            android:label="@string/title_activity_files_cp" >
+        </activity>
+        <activity
+            android:name="com.playmarktrails.provider.ConstantsBrowserActivity"
+            android:label="@string/title_activity_constants_browser" >
+        </activity>
+    </application>
+
+</manifest>
